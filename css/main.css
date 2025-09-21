@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #f5f5f5;
     color: #333;
     line-height: 1.6;
@@ -17,12 +17,7 @@ body {
     padding: 0 20px;
 }
 
-.title {
-    text-align: center;
-    color: #007bff;
-    margin: 30px 0;
-    font-size: 2rem;
-}
+
 
 .parent {
     width: 100%;
@@ -31,19 +26,52 @@ body {
     padding: 20px;
     background-color: #007bff;
     border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 45px #007bff;
     height: 800px;
+    position: relative;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    background: #0066ff;
+    width: 110%;
+    right: -30px;
+    position: absolute;
+
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    border-width: 15px;
+    border-color: #005ce6 #005ce6 transparent transparent;
+    border-style: solid;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    border-width: 15px;
+    border-color: #005ce6 transparent transparent #005ce6;
+    border-style: solid;
 }
 
 #the-input {
     width: 100%;
     padding: 15px 20px;
-    font-size: 5rem;
+    font-size: 1rem;
     font-weight: bold;
     border: 2px solid #ddd;
     border-radius: 8px;
     margin-bottom: 15px;
-    text-align: center;
+    margin-top: 80px;
     transition: border-color 0.3s;
 }
 
@@ -172,5 +200,38 @@ body.dark .todo-item {
     .results .todo-item button {
         margin-top: 10px;
         align-self: flex-end;
+    }
+
+    .title {
+        text-align: center;
+        color: white;
+        margin-bottom: 30px;
+        font-size: 2rem;
+        background: #0066ff;
+        width: 450px;
+        right: -30px;
+        position: absolute;
+        border-radius: 5px;
+
+    }
+
+    .title::after {
+        content: "";
+        position: absolute;
+        left: 16px;
+        bottom: -30px;
+        border-width: 15px;
+        border-color: #005ce6 #005ce6 transparent transparent;
+        border-style: solid;
+    }
+
+    .title::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -30px;
+        border-width: 15px;
+        border-color: #005ce6 transparent transparent #005ce6;
+        border-style: solid;
     }
 }
